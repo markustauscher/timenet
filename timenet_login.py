@@ -22,6 +22,7 @@ class timenet_login:
         'button_8': (By.XPATH, '//button[@aria-label="8"]'),
         'button_9': (By.XPATH, '//button[@aria-label="9"]'),
         'button_backspace': (By.XPATH, '//button[@aria-label="borrar"]'),
+        'button_aceptar': (By.XPATH, '//button[@aria-label="Aceptar"]')
         # Add more elements as needed
     }
 
