@@ -135,7 +135,7 @@ class MySeleniumScript(unittest.TestCase):
     def test_entrada(self):
         if self.is_weekend_or_holiday():
             self.write_to_log("HOLIDAY", "NO LOG")
-            self.skipTest("Skipping test on weekends or public holidays")
+            self.skipTest("Skipping test on weekends or holidays")
 
         try:
             self.start_browser()

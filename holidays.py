@@ -6,12 +6,14 @@ class holidays:
         self.holiday_days = []
 
         # Add public holidays
+        # 2024
         self.add_holiday("New Year's Day", date(2024, 1, 1))
         self.add_holiday("Epiphany", date(2024, 1, 6))
         self.add_holiday("Holy Thursday", date(2024, 3, 28))
         self.add_holiday("Good Friday", date(2024, 3, 29))
         self.add_holiday("Worker's Day", date(2024, 5, 1))
         self.add_holiday("Festival of the Community of Madrid", date(2024, 5, 2))
+        self.add_holiday("Festival of the Community of Madrid", date(2024, 5, 15))
         self.add_holiday("Santiago Apóstol", date(2024, 7, 25))
         self.add_holiday("Assumption of the Virgin", date(2024, 8, 15))
         self.add_holiday("National Holiday of Spain", date(2024, 10, 12))
@@ -21,6 +23,8 @@ class holidays:
 
 
         # Add private holidays
+        
+        # 2024
         self.add_holiday("Private Holiday", date(2024, 1, 8))
         self.add_holiday("Private Holiday", date(2024, 1, 9))
         self.add_holiday("Private Holiday", date(2024, 1, 10))
@@ -28,6 +32,14 @@ class holidays:
         self.add_holiday("Private Holiday", date(2024, 1, 12))
 
         self.add_holiday("Private Holiday", date(2024, 1, 24))
+
+        self.add_holiday("Private Holiday", date(2024, 4, 19))
+        self.add_holiday("Private Holiday", date(2024, 4, 22))
+        self.add_holiday("Private Holiday", date(2024, 4, 23))
+        self.add_holiday("Private Holiday", date(2024, 4, 24))
+        self.add_holiday("Private Holiday", date(2024, 4, 25))
+        self.add_holiday("Private Holiday", date(2024, 4, 26))
+
 
 
 
