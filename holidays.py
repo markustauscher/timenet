@@ -40,6 +40,14 @@ class holidays:
         self.add_holiday("Private Holiday", date(2024, 4, 25))
         self.add_holiday("Private Holiday", date(2024, 4, 26))
 
+        self.add_holiday("Private Holiday", date(2024, 6, 24))
+        self.add_holiday("Private Holiday", date(2024, 6, 25))
+        self.add_holiday("Private Holiday", date(2024, 6, 26))
+        self.add_holiday("Private Holiday", date(2024, 6, 27))
+        self.add_holiday("Private Holiday", date(2024, 6, 28))
+        self.add_holiday("Private Holiday", date(2024, 6, 29))
+
+        self.add_holiday("Private Holiday", date(2024, 8, 2))
 
 
 
