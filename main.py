@@ -1,3 +1,4 @@
+import os
 import unittest
 import datetime
 from selenium import webdriver
@@ -7,6 +8,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 import time
 import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 
 from home_page import home_page
 from holidays import holidays
@@ -48,8 +51,18 @@ class MySeleniumScript(unittest.TestCase):
 
     def start_browser(self):
         # Use ChromeDriverManager to automatically download and manage the ChromeDriver executable
-        self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), chrome_options=self.opt)
-        # self.driver = webdriver.Chrome(chrome_options=self.opt, executable_path=self.driver_path)
+        # Install and get the directory path for the ChromeDriver
+        driver_dir = os.path.dirname(ChromeDriverManager().install())
+
+        # Manually find the correct `chromedriver.exe` in the directory
+        self.driver_path = os.path.join(driver_dir, 'chromedriver.exe')
+
+        # self.driver_path = 'C:\\Users\\MarkusTauscher\\.wdm\\drivers\\chromedriver\\win64\\127.0.6533.119\\chromedriver-win32\\chromedriver.exe'
+        # Define the Service object with the path to the ChromeDriver executable
+        ##service = Service('C:\\Users\\MarkusTauscher\\.wdm\\drivers\\chromedriver\\win64\\127.0.6533.119\\chromedriver-win32\\chromedriver.exe')
+        service = Service(self.driver_path)
+        # Pass the Service object to the Chrome WebDriver
+        self.driver = webdriver.Chrome(service=service, options=self.opt)
 
     def navigate_to_website(self, url='https://timenet-mcp.gpisoftware.com/check/f61518b2-4e5e-431d-a3d7-fc12ea26223c'):
         if not self.driver:
