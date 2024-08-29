@@ -48,7 +48,10 @@ class holidays:
         self.add_holiday("Private Holiday", date(2024, 6, 29))
 
         self.add_holiday("Private Holiday", date(2024, 8, 2))
-
+        self.add_holiday("Private Holiday", date(2024, 8, 3))
+        self.add_holiday("Private Holiday", date(2024, 8, 4))
+        self.add_holiday("Private Holiday", date(2024, 8, 5))
+        self.add_holiday("Private Holiday", date(2024, 8, 6))
 
 
     def add_holiday(self, name, date):
